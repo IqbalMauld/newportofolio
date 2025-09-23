@@ -11,23 +11,40 @@
 }
 /* Color design */
 :root{
-    --primary1: rgb(22, 22, 22);
-    --primary2: rgb(244, 242, 242);
-    --green:rgb(0, 221, 136);
+    --primary: rgba(22, 22, 22);
+    --primary1: rgba(235, 235, 235, 0.793);
+    --primary2: rgba(104, 104, 104, 0.845);
+    --green:rgb(118, 117, 116);
+    --green1:rgb(17, 242, 156);
     --green2:rgb(4, 188, 117);
+    --body : #dbdada;
+    --green3: rgb(27, 188, 16);
+}
+.dark{
+    --primary: rgb(51, 51, 51);
+    --primary1: rgba(98, 158, 102, 0.793);
+    --primary2: rgba(29, 29, 29, 0.845);
+    --green:rgb(0, 221, 136);
+    --green1:rgb(17, 242, 156);
+    --green2:rgb(4, 188, 117);
+    --green3: rgb(27, 188, 16);
+    --body : #8ac18f;
 }
 
 body{
-   background-color: var(--primary1);
+   background-color: var(--body);
+   overflow-x : hidden;
 }
 /* Header start */
 header{
-    width: 100vw;
+    width: 100%;
     padding: 20px;
     position: fixed;
     background-color: var(--primary1);
+    backdrop-filter: blur(5px);
     z-index: 99;
-}
+    border-bottom: 3px solid var(--primary2);
+} 
 .navbar{
     /* color: var(--primary2); */
     display: flex;
@@ -38,13 +55,18 @@ header{
 }
 .nav-logo{
     color: var(--primary2);
-    font-family: "Logo",cursive;
-    font-optical-sizing: auto;
-    font-weight: 200;
+    font-family: sans-serif;
+    font-weight: 10;
     font-style: normal;
+    letter-spacing: 3px;
+    transform: translateX(-50px);
+}
+.nav-logo h1{
+    font-size: 30px;
 }
 .nav-logo h1 span{
-    color: var(--green);
+    font-size: 20px;
+    /* letter-spacing: -4px; */
 }
 .nav{
     width: 400px;
@@ -54,10 +76,14 @@ header{
 .nav a{
     color: var(--primary2);
     font-size: 18px;
+    transform: translateY(20px);
 }
 .nav a:hover{
     color: var(--green);
-    /* border-bottom: 1px solid green; */
+    opacity: 0.2;
+}
+.nav a:hover:not::content{
+    opacity: 1;
 }
 .nav a::after{
     content: '';
@@ -72,6 +98,20 @@ header{
 }
 .extra{
     display: none;
+    /* display: flex; */
+    flex-direction: column;
+}
+.extra span{
+    margin: 3px;
+    width: 25px;
+    height: 2px;
+    background-color: var(--primary2);
+}
+.extra:hover span{
+    background-color: var(--green);
+}
+#menu{
+    display: none;
 }
 /* Header end*/
 
@@ -82,7 +122,6 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background: linear-gradient((250deg), rgba(0, 221, 136, 0.184), rgba(22, 22, 22, 0.31)); */
 }
 .hero main{
    width: 100%;
@@ -90,215 +129,145 @@ header{
    justify-content: space-around;
    align-items: center;
 }
+
 .left{
-    border-left: 3px solid var(--green);
+    /* border-left: 3px solid var(--green); */
    color: var(--primary2);
    display: flex;
    flex-direction: column;
    justify-content: space-between;
+   gap: 5px;
    width: 400px;
-   height: 200px;
+   /* height: 200px; */
    padding-left: 20px;
-   /* background-color: aliceblue; */
    font-family: sans-serif;
 }
-.left h4{
-    font-size: 20px;
+.left h2{
+    /* background-color: red; */
+    color: var(--primary1);
+    background-color: var(--primary);
+    padding: 5px 20px;
+    text-align: center;
+    width: 120px;
+    border-radius: 5px;
+    
 }
 .left h1{
-    font-size: 50px;
+    margin-top: -5px;
+    font-size: 45px;
+}
+.left span {
+    display: flex;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+    padding: 10px 0;
+    /* background-color: red; */
 }
 .left a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--green);
-    width: 130px;
-    height: 30px;
-    color: var(--primary1);
-    border-radius: 5px;
+    width: 150px;
+    padding: 15px;
+    background-color: var(--primary);
+    text-align: center;
+    color: #fff;
     transition: 0.2s;
+    border-radius: 10px;
+    /* opacity: 0; */
 }
 .left a:hover{
-    background-color: var(--green2) ;
-    /* color: var(--primary1); */
+   background-color: transparent;
+   outline: 2px solid var(--primary);
+   color: var(--primary);
 }
+
 .right{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
-    background-color: var(--green);
-    animation: profile 5s linear infinite;   
-    box-shadow: 1px 1px 10px var(--primary2); 
-}
-.right img{
     width: 250px;
-    animation: profileimg 3s infinite;
-    filter: drop-shadow(1px 1px 10px var(--primary1));
+    height: 250px;
+    border-radius: 48%;
+    background-color: var(--primary2);
+    box-shadow: 5px 5px 5px var(--primary);
+    overflow: hidden;
 }
-@keyframes profile{
-    0%{
-        border-radius: 50% 10% ;
-    }
-    50%{
-        border-radius:10% 50%;
-    }
-    100%{
-        border-radius: 50% 10% ;
-    }
+
+.right div{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(/assest/img/lanaprofil.jpg);
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: row-reverse;
+    box-shadow: 5px 5px 5px var(--primary);
+    border-radius: 48%;
 }
-@keyframes profileimg{
-    0%{
-        width: 250px;
-    }
-    50%{
-        width: 260px;
-    }
-    100%{
-        width: 250px ;
-    }
+.right p {
+    position: absolute;
+    top: 0;
+    gap: 10px;
 }
 
 /* Hero end */
 
-
-/* About Start */
+/* About start */
 .about{
     width: 100%;
-    padding: 10px;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'poppins', sans-serif;
 }
 .about main{
-    width: 80%;
-    /* background-color: red; */
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    color: var(--primary2);
-    
-}
-.about main .imgabout{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 350px;
-    /* background-color: var(--green2); */
-    /* animation: profile 5s infinite; */
-    /* box-shadow: 1px 1px 10px var(--primary2);  */
+    width: 100%;
+    font-family: sans-serif;
 }
-.about main .imgabout img{
-    width: 250px;
-    /* animation: profileimg 3s infinite; */
-    filter: drop-shadow(1px 1px 10px var(--primary1));
-}
-.about main .aboutme{
+.about main .aleft{
+    width: 600px;
+    /* background-color: red; */
     display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+    justify-content: center;
+}
+.about main .aleft img{
+    width: 400px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px var(--primary2);
+}
+.about main .aright{
+    color: var(--primary2);
+    width: 600px;
+    font-size: 20px;
+    /* background-color: red; */
 }
 .about h1{
-    font-size: 30px;
+    font-size: 40px;
+    padding: 10px;
 }
-.about main .extra{
+.about main .aright .skill:not .skill h3{
     display: flex;
-    /* justify-content: start; */
-    padding: 20px;
-    margin: 10px;
-    /* margin-bottom: 10px; */
-    /* background-color: red; */
-}
-.extra div button{
-   color: var(--primary2);
-   margin-bottom: 10px;
-   border: none;
-   /* width: 50px; */
-   height: 40px;
-   background: none;
-   font-size: 18px;
-}
-.extra div button::after{
-    content: '';
-    display: block;
-    padding-bottom: 0.5rem ;
-    border-bottom: 0.1rem solid var(--green);
-    transform: scaleX(0);
-    transition: 0.2s linear;
-}
-.extra div button:hover{
-    color: var(--green);
-}
-.extra div button:hover::after{
-    transform: scale(0.5);
-}
-.extra .skill .coding{
-    transition: 0.2s;
-    opacity: 0;
-}
-.extra .pendidikan .codingp{
-    transition: 0.2s;
-    opacity: 0;
-    
-}
-.extra .pengalaman p{
-    transition: 0.2s;
-    opacity: 0;
+    gap: 10px;
+    padding: 10px;
 
 }
-.extra{
-    /* background-color: aqua; */
+.skill h3{
+    padding: 10px;
 }
-.pengalaman{
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    color: var(--primary2);
-    /* background-color: red; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    /* background-color: red; */
+.skill img{
+    width: 50px;
 }
-.about main div{
-    width: 300px;
-    height: 150px;
-     background: linear-gradient(to right, rgba(50, 50, 50, 0.318), var(--green));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-direction: column;
-    color: var(--primary2);
-    font-family: sans-serif;
-    text-align: center;
-    border-radius: 10px;
-    transition: 0.2s;
-    cursor: pointer;
-}
-.about main div:hover{
-    background: linear-gradient(to left, var(--green), rgba(50, 50, 50, 0.318));
-}
-
-/* About End */
+/* About end */
 
 
 /* Media Queries */
 @media (max-width: 600px) {
     /* Header start */
-    header{
-        /* position: relative; */
-        /* border: 1px solid var(--green); */
-    }
-    .nav-logo{
-        font-size: ;
+    .nav-logo h1{
+        font-size: 20px;
+        padding: 10px;
     }
     .navbar{
         display: flex;
@@ -318,17 +287,19 @@ header{
         overflow-y: hidden;
         opacity: 0;
         z-index: -5;
+        backdrop-filter: blur(10px);
+    }
+    .extra{
+        display: flex;
+        /* transform: translateY(-20px); */
     }
     .nav.active{
        left: 0;
        opacity: 1;
        background-color: var(--primary1);
     }
-    .extra{
-        display: flex;
-    }
     #menu{
-        color: var(--green);
+        color: var(--primary2);
     }
     #menu:hover{
         color: var(--primary2);
@@ -337,42 +308,47 @@ header{
     
     /* Hero start */
     .hero main{
-        flex-direction: column;
+        margin-left: 50px ;
+        flex-direction: column-reverse;
         /* justify-content: center; */
         gap: 80px;
-        /* background-color: red; */
     }
     .left{
-        height: 150px;
-        margin-left: 130px;
         border-left: none;
-        border-left: 3px solid var(--green);
+        
     }
-    .left h4{
-        font-size: 15px;
+    .hero main .left h1{
+        font-size: 35px;
     }
-    .left h1{
-        font-size: 30px;
-    }
-    .left h2{
-        font-size: 15px;
-    }
-    .right{
+    .hero main .right{
         width: 200px;
         height: 200px;
+        margin: 0 auto;
     }
-   .hero main .right #profile{
-        width: 10px;
+   #profile{
+        width: 80%
     }
     /*Hero end */
-        /* ABout start */
-.about main{
-   flex-direction: column;
-}
-    /* ABout End */
-}
 
-@media (max-width: 769px){
+    
+    /* About start */
+    .about main{
+        flex-direction: column;
+        margin-left: 50px ;
+        /* background-color: red; */
+    }
+    .about main .aleft img{
+        width: 350px;
+    }
+    .about main .aright{
+        max-width: 450px;
+    }
+    .about main .aright p{
+        font-size: 20px;
+    }
+    /* About end */
+
+@media  (max-width:900px){
     .nav-logo{
         font-size: 18px;
     }
@@ -404,11 +380,9 @@ header{
         opacity: 1;
         background-color: var(--primary1);
     }
-    .extra{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+    /* .extra{
+        display: block;
+    } */
     #menu{
         color: var(--green);
     }
@@ -436,7 +410,6 @@ header{
     .right img{
         width: 100px;
     }
-        /* ABout start */
 
-    /* ABout End */
+}
 }

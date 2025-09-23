@@ -8,89 +8,90 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header Start -->
     <header>
         <nav class="navbar">
+          <div class="extra">
+             <span></span>
+             <span></span>
+             <span></span>
+          </div>
             <div class="nav-logo">
-                <h1><span>I</span>qbal<span>M</span>aulana</h1>
+                <h1 id="logoP">Iqbal<span>maulana</span></h1>
             </div>
             <div class="nav">
-                <a href="#hero">Beranda</a>
-                <a href="#about">Tentang saya</a>
-                <a href="#">Portofolio</a>
-                <a href="#">Kontak</a>
-            </div>
-            <div class="extra">
-                <a href="#" id="menu"><i data-feather="menu"></i></a>
+                <a href="#hero">Home</a>
+                <a href="#about">About Me</a>
+                <a href="#project">Services</a>
+                <a href="#contact">Contact</a>
+                
             </div>
     </nav>
 </header>
+
 <!-- Header End -->
 
 <!-- Hero Start -->
  <section class="hero" id="hero">
     <main>
         <div class="left">
-            <h4>Hallo, Nama saya</h4>
-            <h1>Iqbal Maulana</h1>
-            <h2>Saya adalah Web Developer</h2>
-            <a href="#">Download CV</a>
+            <h2 class="text1">Hi i'am</h2>
+            <h1> Iqbal Maulana👋</h1>
+            <h3 class="text"></h3>
+            <h3 class="text2"></h3>
+            <span>
+                <a href="#">Contact Me</a>
+                <a href="#">View Project</a>
+            </span>
         </div>
         <div class="right">
-          <img src="assest/img/profile.png" alt="" id="profile">
+            
+           <div>
+
+           </div>
         </div>
     </main>
  </section>
 <!-- Hero End -->
 
-<!-- About start -->
+<!-- About Start -->
  <section class="about" id="about">
-   <main>
-    <div class="imgabout">
-      <img src="assest/img/profile.png" alt="Gambarsaya">
-    </div>
-    <div class="aboutme">
-      <h1>Tentang saya</h1>
-      <p>Saya adalah seorang web developer yang berpengalaman dengan keahlian <br>
-         dalam merancang dan mengembangkan situs web yang responsif dan interaktif. <br>
-          Dengan pemahaman mendalam tentang berbagai teknologi web seperti <br>
-           HTML, CSS, JavaScript, dan framework modern, saya berkomitmen untuk <br>
-            menciptakan pengalaman pengguna yang optimal dan solusi digital yang inovatif</p>
-            <div class="extra">
-              <div class="skill">
-                <button id="btns">Keahlian</button>
-                <div class="coding">
-                  <p>HTML</p>
-                  <p>CSS</p>
-                  <p>JavaScript</p>
-                </div>
-              </div>
-              <div class="pengalaman">
-                <button id="btnp">Pengalaman</button>
-                <p>PT. Astra Daihatsu Motor</p>
-              </div>
-              <div class="pendidikan">
-               <button id="btnpp"> Pendidikan</button>
-                <div class="codingp">
-                  <p>SDN Kudaile 02</p>
-                  <p>SMP Muhammadiyah Slawi</p>
-                  <p>SMK NU 01 Adiwerna</p>                  
-                </div>
-              </div>
-              
+    <main>
+        <div class="aleft">
+            <img src="./assest/img/imgpoto.jpg" alt="">
+        </div>
+        <div class="aright">
+            <h1>About Me</h1>
+        <p>Hi! I'm Iqbal Maulana, a passionate Web Developer with a strong focus on building modern, responsive, and user-friendly websites. I love turning ideas into real, functional, and beautiful digital experiences.
+            With experience in HTML, CSS, JavaScript, and modern frameworks like React or Vue, I enjoy crafting front-end interfaces that not only look great but also perform well. On the back-end, I work with Node.js / Express / etc. to build solid and scalable web applications.
+            <div class="skill">
+                <h3>My skill</h3>
+                <img src="assest/img/html.png" alt="">
+                <img src="assest/img/css.png" alt="">
+                <img src="assest/img/js.png" alt="">
+                <img src="assest/img/react.png" alt="">
+                <img src="assest/img/nodejs.png" alt="">
             </div>
-    </div>
+        </div>
     </main>
  </section>
 <!-- About End -->
-
 <script>
     feather.replace();
   </script>
 
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/TextPlugin.min.js"></script>
+
+  
+<!-- My javascript -->
     <script src="assest/js/script.js"></script>
 </body>
 </html>
