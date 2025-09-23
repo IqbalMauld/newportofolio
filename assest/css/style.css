@@ -215,11 +215,12 @@ header{
     }
 
     .card {
-      background: #a7a7a7;
+      background: rgb(55, 55, 55);
       border-radius: 15px;
       padding: 30px;
       box-shadow: 0 5px 15px rgba(0,0,0,0.05);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      color: #d5d5d5;
     }
 
     .card:hover {
@@ -386,6 +387,12 @@ header{
     font-size: 40px;
     padding: 10px;
 }
+.about main p{
+    text-align: center;
+}
+.about main .first .aright p{
+    text-align: start;
+}
 /* About end */
 
 
@@ -470,8 +477,13 @@ header{
     .about main .aleft img{
         width: 350px;
     }
+    .about main .aleft{
+        margin: 0 auto;
+    }
     .about main .aright{
         max-width: 450px;
+        margin: 0 auto;
+        padding: 0 30px;
     }
     .about main .aright p{
         font-size: 20px;
