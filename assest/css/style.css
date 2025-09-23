@@ -441,13 +441,6 @@ header{
     .left h2{
         font-size: 15px;
     }
-    .right{
-        width: 200px;
-        height: 200px;
-    }
-    .right img{
-        /* width: 100px; */
-    }
 
 }
 }
