@@ -187,27 +187,65 @@ header{
     width: 250px;
     height: 250px;
     border-radius: 48%;
-    background-color: var(--primary2);
+    background-color: var(--primary);
     box-shadow: 5px 5px 5px var(--primary);
-    overflow: hidden;
+    /* overflow: hidden; */
+    position: relative;
+    z-index: -1;
 }
 
-.right div{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(/assest/img/lanaprofil.jpg);
-    width: 90%;
-    height: 90%;
-    display: flex;
-    flex-direction: row-reverse;
-    box-shadow: 5px 5px 5px var(--primary);
-    border-radius: 48%;
-}
-.right p {
-    position: absolute;
-    top: 0;
-    gap: 10px;
-}
+.profile {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      padding: 5px;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 5px solid white;
+      object-fit: cover;
+    }
+
+    .bubble {
+      position: absolute;
+      background: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .pict{
+        width: 40px;
+        height: 20px;
+        position: absolute;
+    }
+
+    /* posisi bubble */
+    .react   { top: -9%; left: 50%; transform: translateX(-50%); }
+    .ts      { top: 30%; right: -50%; }
+    .js      { top: 30%; left: -15%; }
+    .tailwind{ bottom: 25%; right: -25%; }
+    .next    { bottom: -3%; left: 30%; transform: translateX(-50%); }
+    .tsp     { top: 13%; right: 8%;}
+
+    /* warna khusus */
+    .react { background: #fff; color: #333; }
+    .ts { background: #007acc; color: #fff; }
+    .js { background: #f7df1e; color: #000; }
+    .tailwind { background: #38bdf8; color: #fff; }
+    .next { background: #000; color: #fff; }
 
 /* Hero end */
 
