@@ -358,13 +358,13 @@ header{
     .hero main .left h1{
         font-size: 35px;
     }
-    .hero main .right{
+    /* .hero main .right{
         width: 200px;
         height: 200px;
-        margin: 0 auto;
-    }
-   #profile{
-        width: 80%
+        position: relative;
+    } */
+    .right {
+
     }
     /*Hero end */
 
@@ -446,7 +446,7 @@ header{
         height: 200px;
     }
     .right img{
-        width: 100px;
+        /* width: 100px; */
     }
 
 }
