@@ -129,7 +129,17 @@ header{
    justify-content: space-around;
    align-items: center;
 }
-
+.about main {
+  display: flex;
+  flex-direction: column;
+}
+.about main .first {
+    display: flex;
+}
+.about #h1skills{
+    color: var(--primary2);
+    padding: 20px;
+}
 .left{
     /* border-left: 3px solid var(--green); */
    color: var(--primary2);
@@ -174,10 +184,11 @@ header{
     border-radius: 10px;
     /* opacity: 0; */
 }
-.left a:hover{
-   background-color: transparent;
-   outline: 2px solid var(--primary);
-   color: var(--primary);
+.left span a:hover {
+  background-color: transparent;
+  outline: 2px solid var(--primary);
+  color: var(--primary);
+  transform: translateX(5px) rotate(3deg) scale(1.05);
 }
 
 .right{
@@ -193,6 +204,80 @@ header{
     position: relative;
     z-index: -1;
 }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 100%;
+      width: 100%;
+      padding: 20px;
+    }
+
+    .card {
+      background: #a7a7a7;
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .card-header img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .level {
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 2px;
+    }
+
+    /* Tag */
+    .tags {
+      display: flex;
+      gap: 6px;
+      margin-top: 12px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      font-size: 12px;
+      font-weight: bold;
+      padding: 4px 10px;
+      border-radius: 10px;
+      color: #fff;
+    }
+
+    .frontend { background: #e63ec0; }
+    .backend  { background: #3a97f7; }
+    .tools    { background: #12c48b; }
+
+    .exp {
+      font-size: 12px;
+      background: #eee;
+      padding: 4px 10px;
+      border-radius: 10px;
+      color: #555;
+    }
 
 .profile {
       position: absolute;
@@ -225,21 +310,37 @@ header{
       align-items: center;
       gap: 6px;
     }
+.pict {
+  width: 40px;
+  height: 20px;
+  position: absolute;
+}
 
-    .pict{
-        width: 40px;
-        height: 20px;
-        position: absolute;
-    }
+/* posisi bubble */
+.react   { top: -20px; left: 40%; transform: translateX(-50%); animation: topBot 3s ease-in-out infinite;}
+.js      { top: 20%; left: -40px; transform: translateY(-50%); animation: bounce 1s infinite;}
+.tsp      { top: 10%; right: -35px; animation: bounce 1s infinite;}
+.tailwind{ bottom: 10%; right: 90%; animation: topBot 3s ease-in-out infinite;}
+.next    { bottom: -25px; left: 60%; transform: translateX(-50%); animation: topBot 3s ease-in-out infinite;}
 
-    /* posisi bubble */
-    .react   { top: -9%; left: 50%; transform: translateX(-50%); }
-    .ts      { top: 30%; right: -50%; }
-    .js      { top: 30%; left: -15%; }
-    .tailwind{ bottom: 25%; right: -25%; }
-    .next    { bottom: -3%; left: 30%; transform: translateX(-50%); }
-    .tsp     { top: 13%; right: 8%;}
 
+/* Animasi bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  30%      { transform: translateY(-15px); }
+  50%      { transform: translateY(-12); }
+  70%      { transform: translateY(-10px); }
+}
+
+/* Animasi topBot */
+@keyframes topBot {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+
+    
     /* warna khusus */
     .react { background: #fff; color: #333; }
     .ts { background: #007acc; color: #fff; }
@@ -284,18 +385,6 @@ header{
 .about h1{
     font-size: 40px;
     padding: 10px;
-}
-.about main .aright .skill:not .skill h3{
-    display: flex;
-    gap: 10px;
-    padding: 10px;
-
-}
-.skill h3{
-    padding: 10px;
-}
-.skill img{
-    width: 50px;
 }
 /* About end */
 
@@ -374,6 +463,9 @@ header{
         flex-direction: column;
         margin-left: 50px ;
         /* background-color: red; */
+    }
+    .about main .first {
+        flex-direction: column;
     }
     .about main .aleft img{
         width: 350px;
