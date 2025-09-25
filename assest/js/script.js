@@ -108,3 +108,46 @@ document.addEventListener('click', function(e) {
         nav.classList.remove('active');
     }
 });
+
+
+ 
+  const buttons = document.querySelectorAll('.btn button');
+  const cards = document.querySelectorAll('.skills .card');
+
+function filterCards(filter, btn) {
+  // reset semua button
+  buttons.forEach(b => {
+    b.style.backgroundColor = "";
+    b.style.color = "black";
+    b.style.fontSize = "15px";
+  });
+
+  // aktifkan tombol yg dipilih
+  btn.style.backgroundColor = btn.getAttribute("data-color");
+  btn.style.color = "white";
+  btn.style.fontSize = "18px";
+
+  // filter cards dengan animasi
+  cards.forEach(card => {
+
+    if (filter === "all" || card.dataset.category === filter) {
+      card.classList.remove("hidden");
+    } else {
+      card.classList.add("hidden");
+    }
+  });
+}
+
+  // event click untuk semua button
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute("data-filter");
+      filterCards(filter, btn);
+    });
+  });
+
+  // 👉 set default (langsung aktifin tombol pertama = All Skills)
+  window.addEventListener("DOMContentLoaded", () => {
+    const defaultBtn = document.querySelector('.btn button[data-filter="all"]');
+    filterCards("all", defaultBtn);
+  });

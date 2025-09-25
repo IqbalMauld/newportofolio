@@ -82,10 +82,24 @@
         <h1 id="h1skills">
             Technical Skills
         </h1>
-        <p>Here are the technologies and tools I work with to bring ideas to life. <br> Always learning, always growing! 🚀</p>
+        <p class="desk">Here are the technologies and tools I work with to bring ideas to life. <br> Always learning, always growing! 🚀</p>
+<div class="btn">
+  <button data-filter="all" data-color="#f59e0b"> 
+    <i data-feather="sun"></i> <span>All Skills</span>
+  </button>
+  <button data-filter="frontend" data-color="#3b82f6"> 
+    <i data-feather="user"></i> <span>Frontend</span>
+  </button>
+  <button data-filter="backend" data-color="#10b981"> 
+    <i data-feather="database"></i> <span>Backend</span>
+  </button>
+  <button data-filter="tools" data-color="#ef4444"> 
+    <i data-feather="settings"></i> <span>Tools</span>
+  </button>
+</div>
           <div class="skills">
     <!-- React -->
-    <div class="card">
+    <div class="card" data-category="frontend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
         <div>
@@ -101,7 +115,7 @@
     </div>
 
     <!-- Next.js -->
-    <div class="card">
+    <div class="card" data-category="frontend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
         <div>
@@ -117,7 +131,7 @@
     </div>
 
     <!-- TypeScript -->
-    <div class="card">
+    <div class="card" data-category="frontend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
         <div>
@@ -133,7 +147,7 @@
     </div>
 
     <!-- Vue.js -->
-    <div class="card">
+    <div class="card" data-category="frontend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg" alt="Vue.js">
         <div>
@@ -149,7 +163,7 @@
     </div>
 
     <!-- Tailwind CSS -->
-    <div class="card">
+    <div class="card" data-category="frontend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" alt="Tailwind">
         <div>
@@ -165,7 +179,7 @@
     </div>
 
     <!-- JavaScript -->
-    <div class="card">
+    <div class="card" data-category="frontend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
         <div>
@@ -181,7 +195,7 @@
     </div>
 
     <!-- Node.js -->
-    <div class="card">
+    <div class="card" data-category="backend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
         <div>
@@ -197,7 +211,7 @@
     </div>
 
     <!-- Express.js -->
-    <div class="card">
+    <div class="card" data-category="backend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js">
         <div>
@@ -213,7 +227,7 @@
     </div>
 
     <!-- MongoDB -->
-    <div class="card">
+    <div class="card" data-category="backend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB">
         <div>
@@ -229,7 +243,7 @@
     </div>
 
     <!-- PostgreSQL -->
-    <div class="card">
+    <div class="card" data-category="backend">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
         <div>
@@ -245,7 +259,7 @@
     </div>
 
     <!-- Git -->
-    <div class="card">
+    <div class="card" data-category="tools">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
         <div>
@@ -261,7 +275,7 @@
     </div>
 
     <!-- Docker -->
-    <div class="card">
+    <div class="card" data-category="tools">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
         <div>
@@ -277,7 +291,7 @@
     </div>
 
     <!-- Figma -->
-    <div class="card">
+    <div class="card" data-category="tools">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="Figma">
         <div>
@@ -293,7 +307,7 @@
     </div>
 
     <!-- VS Code -->
-    <div class="card">
+    <div class="card" data-category="tools">
       <div class="card-header">
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
         <div>
